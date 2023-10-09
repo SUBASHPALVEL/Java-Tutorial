@@ -14,6 +14,12 @@ public class Cat {
 
     static String[] catSpecies;
 
+    {
+        this.id = ++numberOfCats;
+        System.out.println("A new Cat instance was created");
+        System.out.println("The Created Cat Id is "+this.id);
+    }
+
 
     static {
         catSpecies = new String[3];
