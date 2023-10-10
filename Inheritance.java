@@ -42,14 +42,3 @@ public class H extends F{
 }
 
 // multiple inheritance does not supported in java, we have to use interface concept to make it possible
-
-
-
-
-
-
-
-
-
-
-
