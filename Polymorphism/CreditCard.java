@@ -3,4 +3,5 @@ public class CreditCard extends Payment {
     public void pay() {
         System.out.println("Payment by credit card completed");
     }
+   
 }

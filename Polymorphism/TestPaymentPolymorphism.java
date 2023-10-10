@@ -10,5 +10,8 @@ public class TestPaymentPolymorphism {
         paymentB.pay();
         paymentC.pay();
         paymentD.pay();
+
+        System.out.println("Credit card is a Payment :"+ (paymentA instanceof Payment));
+
     }
 }
