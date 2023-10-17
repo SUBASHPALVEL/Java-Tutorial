@@ -1,6 +1,6 @@
 package StringImplementation;
 
-public class Main {
+public class Interning {
 
     public static void main(String[] args) {
 

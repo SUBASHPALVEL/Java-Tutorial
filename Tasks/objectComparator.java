@@ -1,35 +1,5 @@
 import java.lang.reflect.Field;
 
-class Employee {
-    int ID;
-    String Name;
-    int Salary;
-    int PfID;
-   
-   
-    public Employee(int ID, String Name, int Salary,int PfID) {
-        this.ID = ID ;
-        this.Name = Name;
-        this.Salary = Salary;
-        this.PfID = PfID;
-    }
-}
-
-class Intern {
-    int ID;
-    String Name;
-    int PermanentID;
-
-   
-    public Intern(int InternID, String Name, int PermanentID) {
-        this.InternID =InternID ;
-        this.Name = Name;
-        this.PermanentID = PermanentID;
-    }
-}
-
-
-
 public class objectComparator {
     public static void main(String[] args) {
 
@@ -56,7 +26,7 @@ public class objectComparator {
             }
         }
 
-        System.out.println("Updated Employee: " + employee.EmpID + ", " + employee.Name + ", " + employee.Salary + ", " + employee.PfID);
+        System.out.println("Updated Employee: " + employee.ID + ", " + employee.Name + ", " + employee.Salary + ", " + employee.PermanentID);
     }
 }
 
