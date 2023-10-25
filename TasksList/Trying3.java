@@ -23,9 +23,7 @@ public class Trying3 {
                 String altFieldName = altNameAnnotation != null ? altNameAnnotation.alternative() : null;
 
                 if (targetField.getName().equals(sourceField.getName()) || (altFieldName != null && altFieldName.equals(sourceField.getName()))) {
-                    System.out.println("Entering 1st IF");
                     if (targetField.getType().equals(sourceField.getType())) {
-                        System.out.println("Entering 2nd IF");
                         try {
                             targetField.setAccessible(true);
                             sourceField.setAccessible(true);
@@ -40,6 +38,7 @@ public class Trying3 {
         }
     }
 }
+
 
 class Internclass {
     int EmpID;
