@@ -1,11 +1,15 @@
 import java.lang.annotation.Annotation;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
 import java.lang.reflect.Field;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.Arrays;
 
 public class Trying2 {
     public static void main(String[] args) {
         Internclass intern = new Internclass(1, "Subash", 123);
-        Employeeclass employee = new Employeeclass("1", "Subash", 80000, 2911);
+        Employeeclass employee = new Employeeclass("27", "Subash", 80000, 2911);
 
         copy(intern, employee);
 
@@ -55,6 +59,10 @@ class Employeeclass {
     String Name;
     int Salary;
     int PermanentID;
+
+    public Employeeclass() {
+        System.out.println("Default constructor");
+    }
 
     public Employeeclass(String ID, String Name, int Salary, int PermanentID) {
         this.ID = ID;
