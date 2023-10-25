@@ -1,5 +1,7 @@
 package GenericClass;
 
+//Example for erasure types
+
 class DataB<T extends Number> {
     private T key;
     private T value;

@@ -1,5 +1,7 @@
 package GenericClass;
 
+    //Example for erasure types
+
 public class DataA<T> {
     private T key;
     private T value;
