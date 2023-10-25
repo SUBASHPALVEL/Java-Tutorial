@@ -1,3 +1,5 @@
+package TasksList;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -23,7 +25,6 @@ public class objectComparatorWithAnnotation {
         Internclass intern = new Internclass(1,"Subash",123);
         Employeeclass employee = new Employeeclass(24,"Subash",80000,2911);
 
-        copy(src, Employeeclass.class);
 
         Field[] internFields = intern.getClass().getDeclaredFields();
         Field[] employeeFields = employee.getClass().getDeclaredFields();

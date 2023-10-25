@@ -1,3 +1,4 @@
+package TasksList;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.reflect.Field;
@@ -15,6 +16,7 @@ public class Trying {
     }
 
     public static void copy(Object source, Object target) {
+        Class sClass = source.getClass();
         Field[] sourceFields = source.getClass().getDeclaredFields();
         Field[] targetFields = target.getClass().getDeclaredFields();
 

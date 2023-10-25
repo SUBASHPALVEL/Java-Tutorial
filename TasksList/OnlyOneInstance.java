@@ -1,3 +1,5 @@
+package TasksList;
+
 class OnlyOneInstance {
 
     private static Set<Class> instances = new HashSet<>();

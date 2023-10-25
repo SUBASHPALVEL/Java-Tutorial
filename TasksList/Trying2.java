@@ -1,19 +1,24 @@
+package TasksList;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-public class Trying3 {
+public class Trying2 {
     public static void main(String[] args) {
-        Internclass source = new Internclass(1, "Subash", 123);
-        Employeeclass target = new Employeeclass();
-        
+        Internclass intern = new Internclass(1, "Subash", 123);
+        Employeeclass employee = new Employeeclass("27", "Subash", 80000, 2911);
+
+        copy(intern, Employeeclass.class);
+
+        System.out.println("Updated Employee: " + employee.ID + ", " + employee.Name + ", " + employee.Salary + ", " + employee.PermanentID);
+    }
+
+    public static void copy(Object source, Object target) {
         Field[] sourceFields = source.getClass().getDeclaredFields();
         Field[] targetFields = target.getClass().getDeclaredFields();
-        System.out.println(Arrays.toString(sourceFields));
-        System.out.println(Arrays.toString(targetFields));
         
         for (Field targetField : targetFields) {
             for (Field sourceField : sourceFields) {
@@ -21,14 +26,11 @@ public class Trying3 {
                 String altFieldName = altNameAnnotation != null ? altNameAnnotation.alternative() : null;
 
                 if (targetField.getName().equals(sourceField.getName()) || (altFieldName != null && altFieldName.equals(sourceField.getName()))) {
-                    System.out.println("Entering 1st IF");
                     if (targetField.getType().equals(sourceField.getType())) {
-                        System.out.println("Entering 2nd IF");
                         try {
                             targetField.setAccessible(true);
                             sourceField.setAccessible(true);
                             targetField.set(target, sourceField.get(source));
-                            System.out.println(targetField.getName() + ": " + targetField.get(target));
                         } catch (IllegalAccessException e) {
                             e.printStackTrace();
                         }
@@ -77,4 +79,3 @@ class Employeeclass {
 
     String alternative();
 }
-

@@ -1,3 +1,5 @@
+package TasksList;
+
 public class DutchNationalFlag {
     public static void main(String[] args){
         int [] nums = {2,1,2,1,0,1,0};
