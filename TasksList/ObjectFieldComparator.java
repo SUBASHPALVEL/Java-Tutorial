@@ -17,7 +17,6 @@ public class ObjectFieldComparator {
             fieldMap.put(field.getName(), value);
         }
         
-       
         T combinedObj = (T) objClass.newInstance();
         for (Field field : fields) {
             field.setAccessible(true);
