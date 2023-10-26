@@ -18,5 +18,9 @@ class DataB<T extends Number> {
     public void setValue(T value) {
         this.value = value;
     }
-
+public static void main(String[] args) {
+    DataB<Double> mydata= new DataB<Double>(23d, 24d);
+    
+    System.out.println(mydata.getValue());
+}
 }
