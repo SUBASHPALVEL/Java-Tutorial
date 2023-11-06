@@ -21,7 +21,6 @@ class MessageProducer implements Runnable {
             }
 
             try {
-
                 Thread.sleep(1000);
                 blockingMessageQueue.put(msg);
                 System.out.println("Produced " + msg);
